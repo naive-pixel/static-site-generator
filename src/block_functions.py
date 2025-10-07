@@ -85,7 +85,7 @@ def heading_to_html_node(block):
     splt = block.split("#")
     heading_content = splt[-1].strip()
     html_nodes = text_to_children(heading_content)
-    print("html_nodes: ", html_nodes)
+    #print("html_nodes: ", html_nodes)
     return ParentNode(tag=f"h{heading_lvl}",children=html_nodes)
 
 def paragraph_to_html_node(block):
@@ -146,6 +146,6 @@ def text_to_children(text):
     text_nodes = text_to_textnodes(text)
     children = []
     for text_node in text_nodes:
-        print("text_node: ", text_node)
+        #print("text_node: ", text_node)
         children.append(text_node_to_html_node(text_node))
     return children
